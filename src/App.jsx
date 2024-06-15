@@ -12,6 +12,7 @@ import Navbar from "./components/Navbar.jsx";
 import Signup from "./pages/Signup.jsx";
 import Login from "./pages/Login.jsx";
 import ForgotPassword from "./pages/ForgotPassword.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/forgot-password" element={<ForgotPassword />} />
         </Routes>
+        <Footer />
       </Router>
     </>
   );
