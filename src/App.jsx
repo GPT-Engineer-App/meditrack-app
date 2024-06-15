@@ -16,26 +16,28 @@ import Footer from "./components/Footer.jsx";
 
 function App() {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Router>
         <Navbar />
-        <Routes>
-          <Route exact path="/" element={<Index />} />
-          <Route exact path="/user-profile" element={<UserProfile />} />
-          <Route exact path="/add-medicine" element={<AddMedicine />} />
-          <Route exact path="/dashboard" element={<Dashboard />} />
-          <Route exact path="/medicine-detail" element={<MedicineDetail />} />
-          <Route exact path="/medication-tracker" element={<MedicationTracker />} />
-          <Route exact path="/faq" element={<FAQ />} />
-          <Route exact path="/signup" element={<Signup />} />
-          <Route exact path="/terms-and-conditions" element={<TermsAndConditions />} />
-          <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route exact path="/login" element={<Login />} />
-          <Route exact path="/forgot-password" element={<ForgotPassword />} />
-        </Routes>
+        <div className="flex-grow">
+          <Routes>
+            <Route exact path="/" element={<Index />} />
+            <Route exact path="/user-profile" element={<UserProfile />} />
+            <Route exact path="/add-medicine" element={<AddMedicine />} />
+            <Route exact path="/dashboard" element={<Dashboard />} />
+            <Route exact path="/medicine-detail" element={<MedicineDetail />} />
+            <Route exact path="/medication-tracker" element={<MedicationTracker />} />
+            <Route exact path="/faq" element={<FAQ />} />
+            <Route exact path="/signup" element={<Signup />} />
+            <Route exact path="/terms-and-conditions" element={<TermsAndConditions />} />
+            <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route exact path="/login" element={<Login />} />
+            <Route exact path="/forgot-password" element={<ForgotPassword />} />
+          </Routes>
+        </div>
         <Footer />
       </Router>
-    </>
+    </div>
   );
 }
 
