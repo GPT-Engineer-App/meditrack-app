@@ -9,6 +9,7 @@ import FAQ from "./pages/FAQ.jsx";
 import TermsAndConditions from "./pages/TermsAndConditions.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import Navbar from "./components/Navbar.jsx";
+import Signup from "./pages/Signup.jsx";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route exact path="/medicine-detail" element={<MedicineDetail />} />
           <Route exact path="/medication-tracker" element={<MedicationTracker />} />
           <Route exact path="/faq" element={<FAQ />} />
+          <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/terms-and-conditions" element={<TermsAndConditions />} />
           <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
