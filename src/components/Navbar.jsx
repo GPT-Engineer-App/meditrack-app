@@ -1,7 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { auth } from '../firebaseConfig';
+import { signOut } from 'firebase/auth';
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      navigate('/login');
+    } catch (error) {
+      console.error('Error logging out:', error);
+    }
+  };
+
   return (
     <nav className="bg-gray-800 p-4">
       <div className="container mx-auto flex justify-between items-center">
@@ -17,6 +30,7 @@ const Navbar = () => {
           <Link to="/login" className="text-white">Login</Link>
           <Link to="/terms-and-conditions" className="text-white">Terms and Conditions</Link>
           <Link to="/privacy-policy" className="text-white">Privacy Policy</Link>
+          <button onClick={handleLogout} className="text-white">Logout</button>
         </div>
       </div>
     </nav>
