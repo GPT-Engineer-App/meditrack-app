@@ -10,6 +10,8 @@ import TermsAndConditions from "./pages/TermsAndConditions.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Signup from "./pages/Signup.jsx";
+import Login from "./pages/Login.jsx";
+import ForgotPassword from "./pages/ForgotPassword.jsx";
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
           <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/terms-and-conditions" element={<TermsAndConditions />} />
           <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/forgot-password" element={<ForgotPassword />} />
         </Routes>
       </Router>
     </>
